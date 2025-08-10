@@ -1,0 +1,127 @@
+/* === Color Variables === */
+:root {
+  --primary-color: #1E3A8A;     /* Deep Navy Blue */
+  --secondary-color: #059669;   /* Financial Green */
+  --accent-color: #EA580C;      /* Accent Orange */
+  --background-light: #F8FAFC;  /* Light Gray */
+  --text-dark: #374151;         /* Dark Gray */
+  --nb-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+  background: white;
+  box-shadow: var(--nb-shadow);
+  padding: 1rem 2rem;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+    margin-right: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: var(--text-dark);
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(59, 130, 246, 0.1);
+      }
+    }
+  }
+}
+
+/* Hero section */
+.hero-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: var(--background-light);
+
+  .hero-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Software description section */
+.software-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: white;
+
+  .software-text {
+    h2 {
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--text-dark);
+    }
+  }
+
+  .software-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--nb-shadow);
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--text-dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
