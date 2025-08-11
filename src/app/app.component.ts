@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NbLayoutModule, NbButtonModule } from '@nebular/theme';
 import { RouterModule } from '@angular/router';
-
+// Add these imports to your module
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     NbLayoutModule, 
     NbButtonModule,
-    RouterModule  
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
