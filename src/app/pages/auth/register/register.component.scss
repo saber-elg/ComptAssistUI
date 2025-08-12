@@ -1,0 +1,471 @@
+@import '~@nebular/theme/styles/theming';
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg,
+          rgba(30, 58, 138, 0.1) 0%,
+          rgba(5, 150, 105, 0.1) 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+            radial-gradient(circle at 25% 25%, rgba(30, 58, 138, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(5, 150, 105, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.register-card {
+  width: 100%;
+  max-width: 700px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease-out;
+
+  nb-card-header {
+    text-align: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: none;
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      .logo-icon {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.75rem;
+        background: linear-gradient(135deg, #1E3A8A, #059669);
+        border-radius: 1rem;
+        color: white;
+        box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+      }
+    }
+
+    .register-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #1E3A8A, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .register-subtitle {
+      font-size: 1rem;
+      color: nb-theme(text-hint-color);
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  nb-card-body {
+    padding: 1.5rem 2rem;
+  }
+
+  nb-card-footer {
+    padding: 1rem 2rem 2rem;
+    border-top: 1px solid nb-theme(divider-color);
+
+    p {
+      margin: 0.5rem 0;
+
+      &:first-child {
+        font-size: 1rem;
+      }
+
+      .link {
+        color: nb-theme(color-primary-default);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: nb-theme(color-primary-hover);
+          text-decoration: underline;
+        }
+      }
+
+      .back-link {
+        color: nb-theme(text-hint-color);
+        text-decoration: none;
+        font-size: 0.875rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: nb-theme(text-basic-color);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Form Sections
+.form-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(nb-theme(background-basic-color-1), 0.7);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(nb-theme(border-basic-color-2), 0.5);
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: nb-theme(text-basic-color);
+
+    .section-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
+      color: nb-theme(color-primary-default);
+    }
+  }
+}
+
+// Form Layout
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  .label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: nb-theme(text-basic-color);
+
+    .required {
+      color: nb-theme(color-danger-default);
+      margin-left: 0.25rem;
+    }
+  }
+
+  input {
+    transition: all 0.3s ease;
+
+    &:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    }
+  }
+
+  .error-message {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: nb-theme(color-danger-default);
+    font-weight: 500;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+// Password Input Styling
+.password-input-container {
+  position: relative;
+
+  .password-toggle {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    color: nb-theme(text-hint-color);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: nb-theme(text-basic-color);
+    }
+
+    nb-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+// Password Strength Indicator
+.password-strength {
+  margin-top: 0.75rem;
+
+  .strength-bar-container {
+    width: 100%;
+    height: 4px;
+    background-color: nb-theme(background-basic-color-3);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    .strength-bar {
+      height: 100%;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+
+      &.strength-very-weak {
+        background-color: nb-theme(color-danger-default);
+      }
+
+      &.strength-weak {
+        background-color: #f59e0b;
+      }
+
+      &.strength-medium {
+        background-color: nb-theme(color-info-default);
+      }
+
+      &.strength-strong {
+        background-color: nb-theme(color-primary-default);
+      }
+
+      &.strength-very-strong {
+        background-color: nb-theme(color-success-default);
+      }
+    }
+  }
+
+  .strength-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+}
+
+// Terms and Conditions
+.terms-group {
+  margin: 2rem 0;
+
+  nb-checkbox {
+    font-size: 0.875rem;
+
+    .link {
+      color: nb-theme(color-primary-default);
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .required {
+      color: nb-theme(color-danger-default);
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+// Submit Button
+.submit-button {
+  margin-top: 1.5rem;
+  height: 3.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #1E3A8A, #059669) !important;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.3);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:disabled {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.loading {
+    .button-icon.spinning {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  .button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+}
+
+// Register Error Alert
+.register-error {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+// Animations
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+// Input shake animation for errors
+.ng-invalid.ng-touched {
+  animation: shake 0.5s ease-in-out;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .register-container {
+    padding: 0.5rem;
+  }
+
+  .register-card {
+    nb-card-header {
+      padding: 1.5rem 1.5rem 1rem;
+
+      .register-title {
+        font-size: 1.75rem;
+      }
+
+      .register-subtitle {
+        font-size: 0.875rem;
+      }
+    }
+
+    nb-card-body {
+      padding: 1rem 1.5rem;
+    }
+
+    nb-card-footer {
+      padding: 1rem 1.5rem 1.5rem;
+    }
+  }
+
+  .form-section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    nb-card-header {
+      .register-title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .form-section {
+    padding: 0.75rem;
+  }
+
+  .submit-button {
+    height: 3rem;
+    font-size: 0.875rem;
+  }
+}
+
+// Dark theme support
+@include nb-for-theme(dark) {
+  .register-container {
+    background: linear-gradient(135deg,
+            rgba(30, 58, 138, 0.2) 0%,
+            rgba(5, 150, 105, 0.2) 100%);
+  }
+
+  .register-card {
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .form-section {
+      background: rgba(nb-theme(background-basic-color-2), 0.5);
+      border: 1px solid rgba(nb-theme(border-basic-color-3), 0.3);
+    }
+  }
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid nb-theme(color-primary-default);
+  outline-offset: 2px;
+}

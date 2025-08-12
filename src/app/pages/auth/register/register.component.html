@@ -1,0 +1,283 @@
+<div class="register-container">
+    <nb-card class="register-card">
+        <nb-card-header class="text-center">
+            <div class="logo-container">
+                <nb-icon icon="calculator-outline" class="logo-icon"></nb-icon>
+            </div>
+            <h1 class="register-title">Rejoignez ComptAssist</h1>
+            <p class="register-subtitle">Créez votre compte pour accéder à la plateforme de gestion comptable</p>
+        </nb-card-header>
+
+        <nb-card-body>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+
+                <!-- Company Information Section -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <nb-icon icon="home-outline" class="section-icon"></nb-icon>
+                        Informations de l'entreprise
+                    </h3>
+
+                    <div class="form-group">
+                        <label class="label" for="companyName">
+                            Raison Sociale <span class="required">*</span>
+                        </label>
+                        <input
+                                nbInput
+                                fullWidth
+                                id="companyName"
+                                formControlName="companyName"
+                                placeholder="Nom de votre entreprise"
+                                [status]="getFieldStatus('companyName')"
+                                fieldSize="large"
+                        >
+                        <div *ngIf="registerForm.get('companyName')?.touched && registerForm.get('companyName')?.errors"
+                             class="error-message">
+              <span *ngIf="registerForm.get('companyName')?.errors?.['required']">
+                La raison sociale est requise
+              </span>
+                            <span *ngIf="registerForm.get('companyName')?.errors?.['minlength']">
+                La raison sociale doit contenir au moins 2 caractères
+              </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="label" for="legalRepresentative">
+                            Nom du Représentant Légal <span class="required">*</span>
+                        </label>
+                        <input
+                                nbInput
+                                fullWidth
+                                id="legalRepresentative"
+                                formControlName="legalRepresentative"
+                                placeholder="Prénom et nom du représentant"
+                                [status]="getFieldStatus('legalRepresentative')"
+                                fieldSize="large"
+                        >
+                        <div *ngIf="registerForm.get('legalRepresentative')?.touched && registerForm.get('legalRepresentative')?.errors"
+                             class="error-message">
+              <span *ngIf="registerForm.get('legalRepresentative')?.errors?.['required']">
+                Le nom du représentant légal est requis
+              </span>
+                            <span *ngIf="registerForm.get('legalRepresentative')?.errors?.['minlength']">
+                Le nom doit contenir au moins 2 caractères
+              </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information Section -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <nb-icon icon="email-outline" class="section-icon"></nb-icon>
+                        Informations de contact
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="label" for="phone">
+                                Téléphone <span class="required">*</span>
+                            </label>
+                            <input
+                                    nbInput
+                                    fullWidth
+                                    id="phone"
+                                    type="tel"
+                                    formControlName="phone"
+                                    placeholder="+33 1 23 45 67 89"
+                                    [status]="getFieldStatus('phone')"
+                                    fieldSize="large"
+                            >
+                            <div *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.errors"
+                                 class="error-message">
+                <span *ngIf="registerForm.get('phone')?.errors?.['required']">
+                  Le téléphone est requis
+                </span>
+                                <span *ngIf="registerForm.get('phone')?.errors?.['pattern']">
+                  Format de téléphone invalide
+                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="email">
+                                Email <span class="required">*</span>
+                            </label>
+                            <input
+                                    nbInput
+                                    fullWidth
+                                    id="email"
+                                    type="email"
+                                    formControlName="email"
+                                    placeholder="votre@email.com"
+                                    [status]="getFieldStatus('email')"
+                                    fieldSize="large"
+                            >
+                            <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors"
+                                 class="error-message">
+                <span *ngIf="registerForm.get('email')?.errors?.['required']">
+                  L'email est requis
+                </span>
+                                <span *ngIf="registerForm.get('email')?.errors?.['email']">
+                  Format d'email invalide
+                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Section -->
+                <div class="form-section">
+                    <h3 class="section-title">
+                        <nb-icon icon="lock-outline" class="section-icon"></nb-icon>
+                        Sécurité du compte
+                    </h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="label" for="password">
+                                Mot de passe <span class="required">*</span>
+                            </label>
+                            <div class="password-input-container">
+                                <input
+                                        nbInput
+                                        fullWidth
+                                        id="password"
+                                        [type]="showPassword ? 'text' : 'password'"
+                                        formControlName="password"
+                                        placeholder="••••••••"
+                                        [status]="getFieldStatus('password')"
+                                        fieldSize="large"
+                                        (input)="updatePasswordStrength($event)"
+                                >
+                                <button
+                                        type="button"
+                                        nbButton
+                                        ghost
+                                        class="password-toggle"
+                                        (click)="togglePasswordVisibility()"
+                                        tabindex="-1"
+                                >
+                                    <nb-icon [icon]="showPassword ? 'eye-off-outline' : 'eye-outline'"></nb-icon>
+                                </button>
+                            </div>
+
+                            <!-- Password Strength Indicator -->
+                            <div *ngIf="passwordStrength.show" class="password-strength">
+                                <div class="strength-bar-container">
+                                    <div
+                                            class="strength-bar"
+                                            [ngClass]="passwordStrength.colorClass"
+                                            [style.width.%]="passwordStrength.percentage">
+                                    </div>
+                                </div>
+                                <span class="strength-text" [ngClass]="passwordStrength.textClass">
+                  {{ passwordStrength.text }}
+                </span>
+                            </div>
+
+                            <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors"
+                                 class="error-message">
+                <span *ngIf="registerForm.get('password')?.errors?.['required']">
+                  Le mot de passe est requis
+                </span>
+                                <span *ngIf="registerForm.get('password')?.errors?.['minlength']">
+                  Le mot de passe doit contenir au moins 8 caractères
+                </span>
+                                <span *ngIf="registerForm.get('password')?.errors?.['pattern']">
+                  Le mot de passe doit contenir au moins une majuscule, une minuscule et un chiffre
+                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="label" for="confirmPassword">
+                                Confirmation mot de passe <span class="required">*</span>
+                            </label>
+                            <div class="password-input-container">
+                                <input
+                                        nbInput
+                                        fullWidth
+                                        id="confirmPassword"
+                                        [type]="showConfirmPassword ? 'text' : 'password'"
+                                        formControlName="confirmPassword"
+                                        placeholder="••••••••"
+                                        [status]="getFieldStatus('confirmPassword')"
+                                        fieldSize="large"
+                                >
+                                <button
+                                        type="button"
+                                        nbButton
+                                        ghost
+                                        class="password-toggle"
+                                        (click)="toggleConfirmPasswordVisibility()"
+                                        tabindex="-1"
+                                >
+                                    <nb-icon [icon]="showConfirmPassword ? 'eye-off-outline' : 'eye-outline'"></nb-icon>
+                                </button>
+                            </div>
+                            <div *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.errors"
+                                 class="error-message">
+                <span *ngIf="registerForm.get('confirmPassword')?.errors?.['required']">
+                  La confirmation du mot de passe est requise
+                </span>
+                                <span *ngIf="registerForm.get('confirmPassword')?.errors?.['passwordMismatch']">
+                  Les mots de passe ne correspondent pas
+                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-group terms-group">
+                    <nb-checkbox formControlName="acceptTerms" [status]="getFieldStatus('acceptTerms')">
+                        J'accepte les
+                        <a href="#" class="link">conditions d'utilisation</a>
+                        et la
+                        <a href="#" class="link">politique de confidentialité</a>
+                        <span class="required">*</span>
+                    </nb-checkbox>
+                    <div *ngIf="registerForm.get('acceptTerms')?.touched && registerForm.get('acceptTerms')?.errors"
+                         class="error-message">
+            <span *ngIf="registerForm.get('acceptTerms')?.errors?.['required']">
+              Vous devez accepter les conditions d'utilisation
+            </span>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button
+                        type="submit"
+                        nbButton
+                        status="primary"
+                        size="large"
+                        fullWidth
+                        class="submit-button"
+                        [disabled]="isLoading"
+                        [class.loading]="isLoading"
+                >
+                    <nb-icon *ngIf="!isLoading" icon="person-add-outline" class="button-icon"></nb-icon>
+                    <nb-icon *ngIf="isLoading" icon="loader-outline" class="button-icon spinning"></nb-icon>
+                    {{ isLoading ? 'Création du compte...' : 'INSCRIPTION' }}
+                </button>
+
+                <!-- Error Message -->
+                <nb-alert *ngIf="registerError" status="danger" class="register-error">
+                    {{ registerError }}
+                </nb-alert>
+            </form>
+        </nb-card-body>
+
+        <nb-card-footer class="text-center">
+            <p>
+                Vous avez déjà un compte ?
+                <a routerLink="/auth/login" class="link">Se connecter</a>
+            </p>
+            <p class="mt-2">
+                <a routerLink="/" class="back-link">← Retour à l'accueil</a>
+            </p>
+        </nb-card-footer>
+    </nb-card>
+</div>
