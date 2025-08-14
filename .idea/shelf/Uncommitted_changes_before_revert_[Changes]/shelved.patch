@@ -1,0 +1,66 @@
+Index: ../ComptAssistUI/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"6a3f633a-03a9-4e66-ae4e-6609be843e2b\" name=\"Changes\" comment=\"merged\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/dictionaries/project.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/about/about.component.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/about/about.component.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/about/about.component.spec.ts\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/about/about.component.ts\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/login/login.component.css\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/login/login.component.html\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/login/login.component.spec.ts\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/app/pages/login/login.component.ts\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/assets/logo.png\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/app/app.component.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/app/app.component.html\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {}\n}</component>\n  <component name=\"GitHubPullRequestState\">{\n  &quot;prStates&quot;: [\n    {\n      &quot;id&quot;: {\n        &quot;id&quot;: &quot;PR_kwDOPavTqc6jITqd&quot;,\n        &quot;number&quot;: 1\n      },\n      &quot;lastSeen&quot;: 1755172690278\n    },\n    {\n      &quot;id&quot;: {\n        &quot;id&quot;: &quot;PR_kwDOPavTqc6jTjGl&quot;,\n        &quot;number&quot;: 2\n      },\n      &quot;lastSeen&quot;: 1755172722716\n    }\n  ]\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/saber-elg/ComptAssistUI.git&quot;,\n    &quot;accountId&quot;: &quot;fcdefedd-e761-4d04-a833-a47f4bb81aac&quot;\n  }\n}</component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"310bvitic3U5vIdVxCa6l1i7TZT\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/mohamed-saber/Desktop/ComptAssistUI/src/app/assets&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,\n    &quot;ts.external.directory.path&quot;: &quot;/Users/mohamed-saber/Desktop/ComptAssistUI/node_modules/typescript/lib&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app/assets\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"npm.Angular CLI Server\">\n    <configuration name=\"Angular Application\" type=\"JavascriptDebugType\" uri=\"http://localhost:4200\">\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"Angular CLI Server\" type=\"js.build_tools.npm\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"start\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121\" />\n        <option value=\"bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"6a3f633a-03a9-4e66-ae4e-6609be843e2b\" name=\"Changes\" comment=\"\" />\n      <created>1754664170015</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1754664170015</updated>\n      <workItem from=\"1754664171014\" duration=\"1010000\" />\n      <workItem from=\"1754665843656\" duration=\"54000\" />\n      <workItem from=\"1754665925143\" duration=\"10306000\" />\n      <workItem from=\"1754686785728\" duration=\"9752000\" />\n      <workItem from=\"1754765232785\" duration=\"1911000\" />\n      <workItem from=\"1754818017532\" duration=\"781000\" />\n      <workItem from=\"1754915617043\" duration=\"12265000\" />\n      <workItem from=\"1754932558201\" duration=\"2138000\" />\n      <workItem from=\"1754934723079\" duration=\"5481000\" />\n      <workItem from=\"1755175274915\" duration=\"1605000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"initial commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1754681165593</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1754681165593</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"initial commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1754687665826</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1754687665826</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"initial commit\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1754687718862</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1754687718862</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"added index page\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1754818176335</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1754818176335</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"initial commit\" />\n    <MESSAGE value=\"added index page\" />\n    <MESSAGE value=\"merged\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"merged\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../ComptAssistUI/.idea/workspace.xml b/../ComptAssistUI/.idea/workspace.xml
+--- a/../ComptAssistUI/.idea/workspace.xml	(revision 439417419be5eaf371807cddb88b8db05dcf7605)
++++ b/../ComptAssistUI/.idea/workspace.xml	(date 1755177413288)
+@@ -4,20 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6a3f633a-03a9-4e66-ae4e-6609be843e2b" name="Changes" comment="merged">
+-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/about/about.component.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/about/about.component.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/about/about.component.spec.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/about/about.component.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.spec.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/app/pages/login/login.component.ts" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+-    </list>
++    <list default="true" id="6a3f633a-03a9-4e66-ae4e-6609be843e2b" name="Changes" comment="merged" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -128,7 +115,7 @@
+       <workItem from="1754915617043" duration="12265000" />
+       <workItem from="1754932558201" duration="2138000" />
+       <workItem from="1754934723079" duration="5481000" />
+-      <workItem from="1755175274915" duration="1605000" />
++      <workItem from="1755175274915" duration="1858000" />
+     </task>
+     <task id="LOCAL-00001" summary="initial commit">
+       <option name="closed" value="true" />
+@@ -162,7 +149,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1754818176335</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="merged">
++      <option name="closed" value="true" />
++      <created>1755176892713</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1755176892713</updated>
++    </task>
++    <task id="LOCAL-00006" summary="merged">
++      <option name="closed" value="true" />
++      <created>1755176960097</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1755176960097</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
